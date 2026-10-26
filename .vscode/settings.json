@@ -3,5 +3,11 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "liveServer.settings.port": 5500,
   "files.eol": "\n",
-  "cSpell.language": "en,pt,pt_BR"
+  "cSpell.language": "en,pt,pt_BR",
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  }
 }
