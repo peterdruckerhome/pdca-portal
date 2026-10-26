@@ -1,0 +1,213 @@
+/* ─── RESPONSIVE ─────────────────────────────────────────────── */
+
+.mob-nav { display: none; }
+
+/* ════════ MOBILE ≤ 900px ════════ */
+@media (max-width: 900px) {
+
+  /* Layout */
+  :root     { --nav-w: 0px; }
+  .sidebar  { display: none; }
+  .main     { margin-left: 0; padding-bottom: 58px; }
+  .shell    { padding-top: 54px; }
+
+  /* Header */
+  .top-header  { height: 54px; padding: 0 14px; }
+  .th-logo-img { width: 34px; height: 34px; }
+  .th-brand    { font-size: 15px; }
+  .th-sub      { display: none; }
+  .th-ig-links { display: none; }
+
+  /* Footer */
+  footer { margin-left: 0; margin-bottom: 58px;
+           padding: 20px 16px; flex-direction: column; gap: 10px; }
+
+  /* Bottom nav */
+  .mob-nav {
+    display: flex;
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 500;
+    height: 58px;
+    background: #fff;
+    border-top: 2px solid #1a3688;
+    box-shadow: 0 -2px 16px rgba(26,54,136,.10);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+  }
+  .mob-nav::-webkit-scrollbar { display: none; }
+  .mob-nav-item {
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 3px; flex-shrink: 0;
+    min-width: 58px; padding: 0 6px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 7.5px; font-weight: 700;
+    letter-spacing: 0.5px; text-transform: uppercase;
+    color: #94a3b8; border: none; background: transparent;
+    cursor: pointer; position: relative;
+    transition: color .15s; white-space: nowrap;
+  }
+  .mob-nav-item::after {
+    content: ''; position: absolute;
+    top: 0; left: 8px; right: 8px; height: 2px;
+    background: #1a3688;
+    transform: scaleX(0); transition: transform .2s;
+  }
+  .mob-nav-item.active        { color: #1a3688; }
+  .mob-nav-item.active::after { transform: scaleX(1); }
+  .mob-nav-item svg           { width: 18px; height: 18px; stroke: currentColor; }
+  .mob-nav-sep {
+    width: 1px; flex-shrink: 0;
+    background: #edf0f9; margin: 10px 2px;
+  }
+
+  /* Home hero */
+  .home-hero  { padding: 22px 16px 20px; }
+  .hh-logo    { display: none; }
+  .hh-h1      { font-size: clamp(28px, 8vw, 44px); line-height: .92; }
+  .hh-desc    { font-size: 13px; margin-bottom: 18px; }
+  .hh-pill    { margin-bottom: 12px; }
+  .hh-stats   { gap: 18px; }
+  .hh-sn      { font-size: 22px; }
+  .hh-sl      { font-size: 8px; }
+
+  /* Page hero */
+  .page-hero { padding: 22px 16px 18px; }
+  .ph-title  { font-size: clamp(24px, 7.5vw, 38px); }
+  .ph-desc   { font-size: 13px; }
+
+  /* Page body */
+  .page-body { padding: 18px 14px 20px; }
+
+  /* Home cards grid */
+  .home-section-title { margin: 22px 0 10px; }
+  .apres-grid { grid-template-columns: 1fr !important; }
+  .home-grid,
+  .home-grid.two { grid-template-columns: 1fr 1fr; gap: 9px; }
+  .home-card     { padding: 12px 10px 10px; gap: 3px; }
+  .hc-accent     { height: 2px; }
+  .hc-icon       { width: 28px; height: 28px; margin-bottom: 2px; }
+  .hc-icon svg   { width: 14px; height: 14px; }
+  .hc-title      { font-size: 13px; }
+  .hc-sub        { font-size: 7px; letter-spacing: .5px; }
+  .hc-desc       { font-size: 11px; line-height: 1.4; display: none; }
+  .hc-cta        { font-size: 9px; margin-top: 6px; }
+
+  /* News */
+  .news-layout { grid-template-columns: 1fr; gap: 10px; }
+  .news-feat   { min-height: 180px; padding: 18px; }
+  .nf-title    { font-size: 17px; }
+  .nf-desc     { font-size: 12px; }
+  .news-side   { gap: 8px; }
+  .news-row    { grid-template-columns: 1fr; gap: 8px; }
+  .nc          { padding: 11px 13px; }
+  .nc-title    { font-size: 13px; }
+  .news-note   { font-size: 12px; padding: 11px 13px; }
+
+  /* Banco de Talentos */
+  .talent-banner { flex-direction: column; gap: 10px; padding: 16px; }
+  .talent-grid   { grid-template-columns: 1fr; gap: 14px; }
+  .tcat-head     { padding: 13px 15px; }
+  .tcat-ico      { width: 32px; height: 32px; }
+  .tcat-ico svg  { width: 15px; height: 15px; }
+  .tcat-lbl      { font-size: 13px; }
+  .tcat-strip    { padding: 9px 15px; font-size: 11px; }
+  .t-row         { padding: 9px 13px; gap: 8px; }
+  .t-av          { width: 29px; height: 29px; font-size: 10px; }
+  .t-name        { font-size: 12px; }
+  .t-det         { font-size: 10px; }
+  .t-track       { width: 38px; }
+  .tcat-foot     { padding: 9px 15px; font-size: 9px; }
+
+  /* Duck Tank */
+  .duck-layout { grid-template-columns: 1fr; gap: 12px; }
+  .duck-card   { padding: 16px; }
+  .duck-steps  { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .duck-step   { padding: 12px 10px; }
+  .duck-step-n { font-size: 20px; }
+
+  /* Grupos */
+  .grupos-grid { grid-template-columns: 1fr; gap: 10px; }
+  .grupo-top   { padding: 13px 15px; }
+  .grupo-title { font-size: 15px; }
+  .grupo-desc  { padding: 13px 15px; font-size: 13px; }
+
+  /* Summit */
+  .summit-intro { padding: 16px; }
+  .summit-grid  { grid-template-columns: 1fr; gap: 9px; }
+  .summit-item  { padding: 14px; }
+  .summit-emoji { font-size: 20px; }
+  .summit-title { font-size: 14px; }
+  .summit-desc  { font-size: 12px; }
+
+  /* Loja */
+  .shop-tabs  { overflow-x: auto; }
+  .stab       { padding: 10px 14px; font-size: 11px; white-space: nowrap; }
+  .prod-grid  { grid-template-columns: 1fr; gap: 14px; }
+  .p-thumb    { aspect-ratio: 16/9; }
+  .p-body     { padding: 13px 13px 11px; }
+  .p-name     { font-size: 19px; }
+  .p-desc     { font-size: 13px; }
+  .p-btn      { padding: 11px; font-size: 11px; }
+
+  /* Acolhida */
+  .acolhida-layout   { grid-template-columns: 1fr; gap: 14px; }
+  .acolhida-main     { padding: 18px; }
+  .acolhida-main h2  { font-size: 20px; }
+  .acolhida-item     { padding: 12px 14px; }
+
+  /* Sobre */
+  .sobre-grid       { grid-template-columns: 1fr; gap: 20px; }
+  .sobre-logo-block { padding: 24px; }
+  .sobre-logo-block img { width: 100px; height: 100px; }
+  .sobre-kpi        { gap: 7px; }
+  .kpi              { padding: 10px 7px; }
+  .kpi-n            { font-size: 17px; }
+  .mvv              { gap: 10px; }
+  .mvv-body         { padding: 12px 13px; font-size: 13px; }
+  .val-grid         { grid-template-columns: 1fr; gap: 7px; }
+
+  /* Instagram */
+  .ig-header     { flex-wrap: wrap; gap: 10px; padding: 14px 16px; }
+  .ig-follow-btn { margin-left: 0; width: 100%; text-align: center; }
+  .ig-body       { padding: 16px; }
+  .ig-desc       { font-size: 13px; margin-bottom: 14px; }
+  .ig-cta-row    { flex-wrap: wrap; }
+  .ig-cta-btn    { width: 100%; justify-content: center; }
+
+  /* Ouvidoria inline grids → 1 col */
+  .ouv-type-grid   { grid-template-columns: 1fr 1fr !important; gap: 9px !important; }
+  .ouv-commit-grid { grid-template-columns: 1fr !important; gap: 9px !important; }
+  .ouv-form-row    { grid-template-columns: 1fr !important; gap: 0 !important; }
+  .duck-form-row   { grid-template-columns: 1fr !important; gap: 0 !important; }
+  .apres-grid      { grid-template-columns: 1fr !important; }
+  /* Prevent iOS zoom */
+  select, input, textarea { font-size: 16px !important; }
+
+  /* Modal */
+  .modal-box { padding: 22px 16px; }
+  .m-title   { font-size: 18px; }
+  .m-preview { font-size: 12px; padding: 10px 12px; }
+}
+
+/* ════════ VERY SMALL ≤ 400px ════════ */
+@media (max-width: 400px) {
+  .home-grid,
+  .home-grid.two       { grid-template-columns: 1fr; }
+  .ouv-type-grid       { grid-template-columns: 1fr !important; }
+  .duck-steps          { grid-template-columns: 1fr; }
+  .hh-h1              { font-size: 26px; }
+  .ph-title           { font-size: 24px; }
+  .hh-stats           { gap: 14px; }
+  .hh-sn              { font-size: 20px; }
+  .shell              { padding-top: 50px; }
+  .top-header         { height: 50px; }
+  .mob-nav            { height: 54px; }
+  .mob-nav-item       { min-width: 52px; font-size: 7px; }
+  .main               { padding-bottom: 54px; }
+  footer              { margin-bottom: 54px; }
+}
+
+/* Cards de 3 colunas das entidades (Atlética / AdmConsult) */
+@media (max-width:900px){ .feat-grid-3{grid-template-columns:1fr !important;gap:10px !important;} }

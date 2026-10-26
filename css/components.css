@@ -1,0 +1,46 @@
+/* ─── SECTION HEADER ─────────────────────────────────────────── */
+.sec-eye{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--cb);margin-bottom:6px;}
+.sec-title{font-family:'Anton',sans-serif;font-size:32px;letter-spacing:2px;line-height:1;color:var(--db);}
+.sec-rule{width:44px;height:3px;background:linear-gradient(to right,var(--db),var(--cb));margin-top:10px;margin-bottom:28px;}
+
+/* ─── INSTAGRAM PREVIEW ──────────────────────────────────────── */
+.ig-wrap{border:1px solid var(--line);overflow:hidden;margin-bottom:28px;}
+.ig-header{padding:20px 24px;display:flex;align-items:center;gap:16px;}
+.ig-header svg{flex-shrink:0;}
+.ig-handle{font-family:'Anton',sans-serif;font-size:20px;letter-spacing:2px;color:#fff;}
+.ig-tagline{font-size:12px;color:rgba(255,255,255,.6);margin-top:3px;}
+.ig-follow-btn{margin-left:auto;padding:9px 18px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#fff;transition:background .2s;flex-shrink:0;}
+.ig-follow-btn:hover{background:rgba(255,255,255,.25);}
+.ig-body{padding:24px;background:var(--bg);}
+.ig-desc{font-size:14px;color:var(--t2);line-height:1.7;margin-bottom:20px;}
+.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-bottom:20px;}
+.ig-placeholder{aspect-ratio:1;background:var(--bg2);border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;}
+.ig-placeholder svg{width:24px;height:24px;stroke:var(--t3);}
+.ig-placeholder span{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--t3);}
+.ig-cta-row{display:flex;gap:12px;align-items:center;}
+.ig-cta-btn{padding:11px 22px;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#fff;display:flex;align-items:center;gap:8px;transition:opacity .2s;}
+.ig-cta-btn:hover{opacity:.85;}
+.ig-cta-btn svg{stroke:#fff;width:14px;height:14px;}
+.ig-note{font-size:12px;color:var(--t3);font-style:italic;}
+
+/* ─── MODAL ──────────────────────────────────────────────────── */
+.modal-ov{display:none;position:fixed;inset:0;z-index:600;background:rgba(8,14,36,.78);backdrop-filter:blur(6px);align-items:center;justify-content:center;}
+.modal-ov.open{display:flex;}
+.modal-box{background:var(--bg);max-width:440px;width:92%;border-top:4px solid var(--db);padding:32px;position:relative;animation:mIn .25s ease;}
+@keyframes mIn{from{transform:translateY(20px);opacity:0;}to{transform:none;opacity:1;}}
+.m-close{position:absolute;top:12px;right:12px;width:28px;height:28px;background:var(--bg2);font-size:15px;color:var(--t2);display:flex;align-items:center;justify-content:center;transition:background .2s;}
+.m-close:hover{background:var(--line);}
+.m-eye{font-family:'Barlow Condensed',sans-serif;font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--cb);margin-bottom:8px;}
+.m-title{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--db);margin-bottom:14px;}
+.m-preview{padding:12px 14px;background:var(--bg2);border-left:3px solid var(--cb);font-size:13px;color:var(--t2);line-height:1.6;margin-bottom:22px;font-style:italic;}
+.m-wa{width:100%;padding:13px;display:flex;align-items:center;justify-content:center;gap:9px;background:#25d366;color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;transition:background .2s;}
+.m-wa:hover{background:#1eaf57;}
+.m-wa svg{width:18px;height:18px;fill:#fff;flex-shrink:0;}
+
+/* ─── INSTAGRAM EMBED (classes que faltavam) ─────────────────── */
+.ig-embed-wrap{background:var(--bg);}
+.ig-grid-placeholder{padding:36px 24px;background:var(--bg2);}
+.ig-placeholder-msg{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center;}
+.ig-placeholder-msg p{font-size:14px;color:var(--t2);}
+.ig-visit-btn{display:inline-block;padding:11px 22px;color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;transition:opacity .2s,transform .2s;}
+.ig-visit-btn:hover{opacity:.88;transform:translate(-2px,-2px);}
